@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Mobillisme</title>
+		<meta name="description" content="A speedy motion transition effect for an image slideshow." />
+		<meta name="keywords" content="transition, effect, motion, css, javascript, web development, demo" />
+		<meta name="author" content="Codrops" />
+		<link rel="shortcut icon" href="favicon.ico">
+		<link rel="stylesheet" type="text/css" href="css/base.css" />
+		<script>document.documentElement.className="js";var supportsCssVars=function(){var e,t=document.createElement("style");return t.innerHTML="root: { --tmp-var: bold; }",document.head.appendChild(t),e=!!(window.CSS&&window.CSS.supports&&window.CSS.supports("font-weight","var(--tmp-var)")),t.parentNode.removeChild(t),e};supportsCssVars()||alert("Please view this demo in a modern browser that supports CSS Variables.");</script>
+	</head>
+	<body class="loading demo-1">
+		<main>
+			<div class="frame">
+				<div class="frame__title-wrap">
+					<h1 class="frame__title" style="font-size:30px; color:#ffffff">Mobillisme</h1>
+				</div>
+				<div class="frame__links">
+				</div>
+				<a class="frame__github" id="demot"></a>
+				<div class="frame__demos">
+					<a  class="frame__demo frame__demo--current">Nouvelle interface arrive très prochainnememnt!</a>
+				</div>
+			</div>
+			<div class="deco deco--bg"></div>
+			<div class="deco deco--shape deco--shape-hor deco--shape-1"></div>
+			<div class="deco deco--shape deco--shape-hor deco--shape-2"></div>
+			<div class="slideshow">
+				<div class="slide">
+					<div class="slide__image" style="background-image:url(images/66.png)"></div>
+					<h2 class="slide__title" >Edu-Plugins "Stastistiques et visualisation des donnèes"</h2>
+				</div>
+				<div class="slide">
+					<div class="slide__image slide__image--hidden" style="background-image:url(images/comp2.gif)"></div>
+					<h2 class="slide__title slide__title--hidden" style="color:black;">Advenced features for learning</h2>
+				</div>
+				<div class="slide">
+					<div class="slide__image slide__image--hidden" style="background-image:url(images/99.gif)"></div>
+					<h2 class="slide__title slide__title--hidden">Learning-platform prototype</h2>
+				</div>
+				<div class="slide">
+					<div class="slide__image slide__image--hidden" style="background-image:url(images/7.gif)"></div>
+					<h2 class="slide__title slide__title--hidden">Application pour LPP</h2>
+				</div>
+				<div class="slide">
+					<div class="slide__image slide__image--hidden" style="background-image:url(images/4401.jpg)"></div>
+					<h2 class="slide__title slide__title--hidden" style="color:black;">20 nouveaux UI templates sur Creativemarket </h2>
+				</div>
+				<nav class="nav">
+					<button class="nav__button nav__button--previous">Précédent</button>
+					<button class="nav__button nav__button--next">Suivant</button>
+				</nav>
+			</div>
+		</main>
+		<script>
+			var deadline = new Date("Jul 25, 2020 15:37:25").getTime();
+			var x = setInterval(function() {
+			var now = new Date().getTime();
+			var t = deadline - now;
+			var days = Math.floor(t / (1000 * 60 * 60 * 24));
+			var hours = Math.floor((t%(1000 * 60 * 60 * 24))/(1000 * 60 * 60));
+			var minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
+			var seconds = Math.floor((t % (1000 * 60)) / 1000);
+			document.getElementById("demot").innerHTML = days + "d "
+			+ hours + "h " + minutes + "m " + seconds + "s ";
+			    if (t < 0) {
+			        clearInterval(x);
+			        document.getElementById("demot").innerHTML = "EXPIRED";
+			    }
+			}, 1000);
+			</script>
+		<script src="js/charming.min.js"></script>
+		<script src="js/imagesloaded.pkgd.min.js"></script>
+		<script src="js/TweenMax.min.js"></script>
+		<script src="js/demo.js"></script>
+	</body>
+</html>
